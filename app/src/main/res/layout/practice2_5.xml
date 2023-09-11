@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/register2_5"
+        android:src="@drawable/ic_statusbar"
+        android:background="#F54D4D"/>
+
+    <TextView
+        android:id="@+id/register2_5"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/welcome2_5"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:background="#F54D4D"/>
+
+    <TextView
+        android:id="@+id/welcome2_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="WELCOME ABROAD"
+        android:textSize="16sp"
+        app:flow_horizontalBias="0.0"
+        app:layout_constraintBottom_toTopOf="@id/please2_5"
+        app:layout_constraintEnd_toEndOf="@id/end24"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/begin24"
+        app:layout_constraintTop_toBottomOf="@id/register2_5" />
+
+    <TextView
+        android:id="@+id/please2_5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Please enter your valid Name     email address to using all of our feature "
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/end24"
+        app:layout_constraintStart_toStartOf="@id/begin24"
+        app:layout_constraintTop_toBottomOf="@id/welcome2_5"
+        app:layout_constraintBottom_toTopOf="@id/fullname2_5"
+        android:layout_marginTop="12dp"
+        />
+
+
+    <TextView
+        android:id="@+id/fullname2_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Full Name"
+        app:layout_constraintStart_toStartOf="@id/begin24"
+        app:layout_constraintTop_toBottomOf="@id/please2_5"
+        app:layout_constraintBottom_toTopOf="@id/button1"
+       />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/button1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/begin24"
+        app:layout_constraintEnd_toEndOf="@id/end24"
+        app:layout_constraintTop_toBottomOf="@id/fullname2_5"
+        app:layout_constraintBottom_toTopOf="@id/emailaddress2_5"
+        app:errorEnabled="true"
+        android:layout_marginTop="8dp"
+        >
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/emailaddress2_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="E-Mail Address"
+        app:layout_constraintBottom_toTopOf="@id/button2"
+        app:layout_constraintStart_toStartOf="@id/begin24"
+        app:layout_constraintTop_toBottomOf="@id/button1" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/begin24"
+        app:layout_constraintEnd_toEndOf="@id/end24"
+        app:layout_constraintTop_toBottomOf="@id/emailaddress2_5"
+        app:layout_constraintBottom_toTopOf="@id/button2"
+        app:errorEnabled="true"
+        android:layout_marginTop="8dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/referralcode2_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Referral Code"
+        app:layout_constraintEnd_toEndOf="@id/end24"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/begin24"
+        app:layout_constraintTop_toBottomOf="@id/button2"
+        app:layout_constraintBottom_toTopOf="@id/button3"/>
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/begin24"
+        app:layout_constraintEnd_toEndOf="@id/end24"
+        app:layout_constraintTop_toBottomOf="@id/referralcode2_5"
+        app:errorEnabled="true"
+        android:layout_marginTop="8dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialbutton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/end24"
+        app:layout_constraintStart_toStartOf="@id/begin24"
+        app:layout_constraintBottom_toBottomOf="@id/image2_5"
+        android:text="Next"
+        android:backgroundTint="#F54D4D"
+        app:cornerRadius="10dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="30dp"/>
+
+
+    <ImageView
+        android:id="@+id/image2_5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/materialbutton"
+        android:src="@drawable/ic_homeindicator"
+        android:backgroundTint="@color/black"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/begin24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

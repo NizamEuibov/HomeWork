@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:padding="40dp"
+    android:orientation="vertical"
+    >
+
+<com.google.android.material.checkbox.MaterialCheckBox
+  android:id="@+id/checkbox_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+  app:checkedState="indeterminate"
+  android:text="parent"/>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+    android:orientation="vertical"
+      >
+  <com.google.android.material.checkbox.MaterialCheckBox
+      android:id="@+id/checkbox_child1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:checked="true"
+      android:text="child 1"/>
+  <com.google.android.material.checkbox.MaterialCheckBox
+      android:id="@+id/checkbox_child2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="child 2"/>
+  <com.google.android.material.checkbox.MaterialCheckBox
+      android:id="@+id/checkbox_child3"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="child 3"/>
+  </LinearLayout>
+
+
+</LinearLayout>

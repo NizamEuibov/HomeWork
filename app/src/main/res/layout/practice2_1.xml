@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_logo"
+        app:layout_constraintBottom_toTopOf="@id/inputtext"
+        />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/image_logo"
+        app:layout_constraintBottom_toBottomOf="@id/image_logo"
+        android:layout_marginBottom="82dp"
+        android:layout_marginStart="28dp"
+        android:text="Welcome back"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#252525"
+        />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/image_logo"
+        app:layout_constraintTop_toBottomOf="@id/text1"
+        app:layout_constraintBottom_toBottomOf="@id/image_logo"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="62dp"
+        android:layout_marginTop="3dp"
+        android:text="sign in to access your account"
+        android:textSize="14sp"
+        android:textColor="#252525"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxBackgroundColor="#33C4C4C4"
+        android:hint="Enter your mail"
+        app:layout_constraintTop_toBottomOf="@id/image_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toTopOf="@id/inputtext1"
+
+        >
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputedittext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableEnd="@drawable/ic_mail"
+            android:singleLine="true"
+            android:autoLink="email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="22dp"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputtext1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="32dp"
+        android:hint="Password"
+        app:boxBackgroundColor="#33C4C4C4"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:layout_constraintBottom_toTopOf="@id/helpertext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputtext">
+
+
+
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputedittext1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autoLink="email"
+            android:drawableEnd="@drawable/ic_lock"
+            android:paddingStart="22dp"
+            android:singleLine="true"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/helpertext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forget password?"
+        android:textColor="#f54D4D"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toTopOf="@id/materialbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputtext1"
+        android:layout_marginTop="10dp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       app:layout_constraintBottom_toTopOf="@id/viewtext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/helpertext"
+        android:text="Next"
+        android:textSize="20dp"
+        app:icon="@drawable/baseline_navigate_next_24"
+        app:iconGravity="textEnd"
+        app:iconSize="35dp"
+        app:cornerRadius="10dp"
+        android:layout_marginHorizontal="30dp"
+        app:backgroundTint="#FF3951"
+        android:layout_marginTop="150dp"
+        android:autoLink="email"/>
+
+    <TextView
+        android:id="@+id/viewtext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/materialbutton"
+        app:layout_constraintBottom_toBottomOf="@id/guideline2_1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="New Member?"
+        android:textSize="13sp"
+        android:layout_marginStart="73dp"
+        />
+
+    <TextView
+        android:id="@+id/viewtext1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/materialbutton"
+        app:layout_constraintBottom_toBottomOf="@id/guideline2_1"
+        app:layout_constraintStart_toEndOf="@id/viewtext"
+        android:text="Register now"
+        android:textSize="13sp"
+        android:textColor="#FF3952"
+        android:layout_marginTop="15dp"
+        android:paddingStart="5dp"
+        android:layout_marginEnd="115dp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="30dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
